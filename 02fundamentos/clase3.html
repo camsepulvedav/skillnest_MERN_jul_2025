@@ -1,0 +1,167 @@
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Título 1</title>
+    <meta name="description" content="Esta página web es de prueba">
+    <meta name="keyword" content="HTML, CSS, JS">
+    <meta name="author" content="Camila Sepúlveda">
+</head>
+
+<body>
+
+    <!--Tags texto (no semántico/semántico)-->
+    <b></b>
+    <strong></strong>
+
+    <i></i>
+    <em></em>
+
+    <p>Esto es un párrafo</p>
+
+    <h1>Título 1</h1>
+    <h2>Título 2</h2>
+    <h3>Título 3</h3>
+    <h4>Título 4</h4>
+    <h5>Título 5</h5>
+    <h6>Título 6</h6>
+
+    <!--Tags listas-->
+    <ul>
+        <li>Ítem 1</li>
+        <ul>
+            <li>Sub ítem 1</li>
+        </ul>
+        <li>Ítem 2</li>
+        <li>Ítem 3</li>
+    </ul>
+
+    <ol>
+        <li>Ítem 1</li>
+        <li>Ítem 2</li>
+        <li>Ítem 3</li>
+    </ol>
+
+    <!--Tags tablas-->
+    <table border="1">
+        <caption>Esta es una tabla de usuarios no semántica</caption>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Edad</th>
+        </tr>
+        <tr>
+            <td>Camila</td>
+            <td>Sepúlveda</td>
+            <td>35</td>
+        </tr>
+        <tr>
+            <td>Orba</td>
+            <td>Venegas</td>
+            <td>67</td>
+        </tr>
+
+        <table border="1">
+            <caption>Esta es una tabla de usuarios semántica</caption>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Edad</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Camila</td>
+                    <td>Sepúlveda</td>
+                    <td>35</td>
+                </tr>
+                <tr>
+                    <td>Orba</td>
+                    <td>Venegas</td>
+                    <td>67</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Total</td>
+                    <td>100</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <!--Tags media-->
+        <img src="https://i.pinimg.com/1200x/13/6a/1f/136a1f84617115fbf3f2780c1861c760.jpg" width="" height=""
+            alt="lorem ipsum" loading="lazy">
+
+        <video controls muted autoplay width="800">
+            <source src="" type="video/mp4">
+            <source src="" type="video/mkv">
+            <source src="" type="video/vid">
+            Tu navegador no puede mostrar el vídeo
+        </video>
+
+        <!--Tags formulario-->
+        <form>
+            <label for="nombre">Nombre: </label>
+            <input type="text" id="nombre" name="nombre" placeholder="Texto en gris">
+
+            <label for="correo">Correo: </label>
+            <input type="email" id="correo" name="correo" required>
+
+            <input type="range" name="" id="">
+            <input type="checkbox" name="" id="">
+
+            <input type="radio" name="colors" id=""> Rojo
+            <input type="radio" name="colors" id=""> Azul
+
+            <input type="search" name="" id="">
+
+            <textarea name="" id="" rows="" cols=""></textarea>
+
+            <select name="" id="" multiple>
+                <option value="">Perú</option>
+                <option value="">Argentina</option>
+                <option value="">Chile</option>
+            </select>
+
+            <input list="buscador">
+            <datalist id="buscador">
+                <option value="Chile">Chile</option>
+            </datalist>
+
+            <input type="password">
+            <input type="date">
+            <button type="submit">Enviar</button>
+        </form>
+
+        <hr>
+
+        <!--Tags div... no hay que usarlos mucho-->
+        <div><label for="nombre">Nombre: </label>
+            <input type="text" id="nombre" name="nombre">
+        </div>
+        <div> <label for="correo">Correo: </label>
+            <input type="email" id="correo" name="correo">
+        </div>
+        <!--Mejor usar los semánticos
+        <header></header>
+        <section></section>
+        <footer></footer>
+        <nav></nav-->
+
+        <hr>
+        <!--Tags inline & block-->
+        <label>Hola</label>
+        <label></label>
+        <p>Hola</p>
+        <p></p>
+        <div>
+            <label>Hola</label>
+        </div>
+        <div>
+            <label>Hola</label>
+        </div>
+</body>
+
+</html>
