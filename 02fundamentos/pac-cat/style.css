@@ -1,0 +1,30 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.cell{
+    /*border: 2px black solid;*/
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background-color: black;
+}
+
+.row {
+    line-height: 0px;
+}
+
+.column {
+    background-color: purple;
+}
+
+.cat {
+    background-size: contain;
+    background-image: url(/skillnest_MERN_jul_2025/00juegos/pac-cat/img/gato.gif);
+}
+
+.burger {
+    background-size: contain;
+    background-image: url(/skillnest_MERN_jul_2025/00juegos/pac-cat/img/burguer.png);
+}
