@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejercicio menú responsive</title>
+        <style>
+            header {
+            background-color: #7d7daa;
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            align-items: center;
+            }
+
+            header ul li {
+            color: #ffffff;
+            list-style: none;
+            }
+
+            header ul{
+                padding: 0px;
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            @media (min-width: 860px){
+                header{
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
+
+                header ul{
+                flex-direction: row;
+                justify-content: space-between;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+                <img id="logo" src="https://placehold.co/100x100">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                </ul>
+        </header>
+    </body>
+</html>
