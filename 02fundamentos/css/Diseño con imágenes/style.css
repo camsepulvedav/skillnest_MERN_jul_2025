@@ -1,0 +1,49 @@
+/* "(...)padding, border y margin. Además, vamos a utilizar Flexbox(...)"*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.mainContainer {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 12px;
+}
+
+.mainContainer__one img, .mainContainer__two img, .mainContainer__three img {
+    padding: 12px 0;
+    height: 250px;
+    width: auto;
+    object-fit: contain;
+}
+
+.mainContainer__one, .mainContainer__two, .mainContainer__three {
+    display: flex;
+    width: 100%;
+    height: 33%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.mainContainer__one {
+    background-color: #d4af85;
+}
+
+.mainContainer__two {
+    background-color: #fee483;
+}
+
+.mainContainer__three {
+    background-color: #f5cfab;
+}
+
+.mainContainer__four{
+    background-color: #dcd6b2;
+    width: 100%;
+    height: 1%;
+    padding: 12px 0;
+    text-align: center;
+}
