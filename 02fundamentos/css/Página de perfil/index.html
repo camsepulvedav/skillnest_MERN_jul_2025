@@ -7,16 +7,77 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
-        <p>Perfil</p>
-        <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-        <button></button>
-    </nav>
-    <div class="tarjetaPrincipal"></div>
+    <header class="main">
+        <nav class="main__nav">
+            <p class="main__p">Perfil</p>
+            <ul>
+                <li>Inicio</li>
+                <li>Mi Perfil</li>
+                <li>Encontrar Conexiones</li>
+            </ul>
+            <button class="main__button">Cerrar Sesión</button>
+        </nav>
+    </header>
+    <div>
+        <div class="profile align cardShadow">
+            <header class="profile__header">
+                <nav class="profile__nav"></nav>
+                <img class= "profile__img" src="https://untitledui.com/images/avatars/levi-rocha" alt="avatar principal">
+            </header>
+            <div class="profile__info">
+                <h1>Divina García</h1>
+                <p id="profile__location">La Serena, Chile</p>
+                <p>Diseñadora UX/UI | Desarrolladora Frontend | Amante de <br>las interacciones significativas</p>
+                <p>Convencida de que la tecnología debe sentirse humana, diseño experiencias <br> digitales accesibles, bellas y funcionales. Cuando no estoy programando o <br>ajustando layouts, recorro las calles buscando inspiración en los colores <br>y relatos de lo cotidiano.</p>
+            </div>
+            <button class="profile__button"><img src="https://img.icons8.com/?size=16&id=t59KdTKkmnPH&format=png&color=027ec0">Editar perfil</button>
+        </div>
+        <div class="education align cardShadow">
+            <h2>Educación</h2>
+            <p>Coding Dojo - Bootcamp de Desarrollo Full Stack</p>
+            <p>Dic 2019 - Mar 2020</p>
+            <p>Triple cinturón negro en Python, MERN y C#</p>
+        </div>
+    </div>
+    <div>
+        <div class="connect align cardShadow">
+            <h3>Solicitudes de conexión (2)</h3>
+            <div class="connect__1">
+                <img class="connect__avatar" src="https://untitledui.com/images/avatars/ashwin-santiago" alt="avatar mini hombre">
+                <p>Eliseo Araya</p>
+                <img src="https://img.icons8.com/?size=48&id=14298&format=png&color=ff68b4">
+                <img src="https://img.icons8.com/?size=48&id=14297&format=png&color=ff68b4">
+            </div>
+            <div class="connect__2">
+                <img class="connect__avatar" src="https://untitledui.com/images/avatars/lana-steiner" alt="avatar mini mujer">
+                <p>Cae Teodoro</p>
+                <img src="https://img.icons8.com/?size=48&id=14298&format=png&color=ff68b4">
+                <img src="https://img.icons8.com/?size=48&id=14297&format=png&color=ff68b4">
+            </div>
+        </div>
+        <div class="contacts align cardShadow">
+            <h3>Tus Conexiones (500+)</h3>
+            <div class="contacts__mini">
+                <img src="" alt="avatar mini hombre">
+                <p>Mateus Delgado</p>
+            </div>
+            <div>
+                <img src="" alt="avatar mini hombre">
+                <p>Daniel Salazar</p>
+            </div><div>
+                <img src="" alt="avatar mini mujer">
+                <p>Mari Kubo</p>
+            </div><div>
+                <img src="" alt="avatar mini hombre">
+                <p>Colin Fowler</p>
+            </div><div>
+                <img src="" alt="avatar mini mujer">
+                <p>Gaby Campos</p>
+            </div><div>
+                <img src="" alt="avatar mini hombre">
+                <p>Fabio Aguilera</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
