@@ -62,7 +62,7 @@ body {
 }
 
 .right-column {
-    width: 320px; /*En complemento con dejar de valor fijo aquí*/
+    width: 320px; /*En complemento con dejar valor fijo aquí*/
     display: flex;
     flex-direction: column;
     gap: 18px;
