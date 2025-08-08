@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+    font-weight: bold;
+    font-size:larger;
+}
+
+.container {
+    display: flex;
+    padding-top: 48px;
+}
+
+.userAvatar {
+    border: 2px black solid;
+    border-radius: 6px;
+    margin: 59px 32px 156px 16px;
+    padding: 12px;
+    text-align: center;
+}
+
+.post {
+    height: 90px;
+    width: 720px;
+    border: 2px black solid;
+    border-radius: 6px;
+    margin: 3% auto;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.likes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4px;
+    margin-left: 4px;
+}
+
+.btn_likes {
+    height: 40px;
+    width: 100px;
+    background-color:gold;
+    border-style: none;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 6px;
+}
