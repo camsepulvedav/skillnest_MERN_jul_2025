@@ -10,8 +10,20 @@ function disappear() {
     addDefinition.style.display = "none"
     }
 
-function like() {
-    //hacer click a “Me gusta” en una de las defs, aparecer ventana indicando que te gustó la def + el título de la misma
-    //con cada click al botón "like" de la definición, debe aumentar el conteo en su respectiva definición
-    alert("Definición was liked")
+//hacer click a “Me gusta” en una de las defs, aparecer ventana indicando que te gustó la def + el título de la misma
+//con cada click al botón "like" de la definición, debe aumentar el conteo en su respectiva definición
+function likeGato() {
+    alert("Gato Atrigado was liked")
+    const likeGato = document.getElementById("gatoA")
+    let contadorGato = Number(gatoA.innerText)
+    contadorGato++
+    gatoA.innerText = contadorGato
+    }
+
+function likeGolden() {
+    alert("Golden Retriever was liked")
+    const likeGolden = document.getElementById("goldenR")
+    let contadorGolden = Number(goldenR.innerText)
+    contadorGolden++
+    goldenR.innerText = contadorGolden
     }
