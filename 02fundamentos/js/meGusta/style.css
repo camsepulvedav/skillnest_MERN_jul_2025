@@ -22,27 +22,38 @@ header {
 .userAvatar {
     border: 2px black solid;
     border-radius: 6px;
-    margin: 59px 32px 156px 16px;
-    padding: 12px;
-    text-align: center;
+    width: auto;
+    height: fit-content;
+    margin: 61px 32px 156px 16px;
+    padding: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 32px;
+}
+
+.userAvatar img {
+    margin-top: 24px;
+    margin-bottom: 12px;
+    width: 80%;
 }
 
 .post {
-    height: 90px;
-    width: 720px;
+    width: 100%;
+    height: fit-content;
     border: 2px black solid;
-    border-radius: 6px;
-    margin: 3% auto;
+    border-radius: 6px; 
+    margin: 24px 0 8px;
     padding: 10px;
-    display: flex;
-    justify-content: space-between;
+    display: inline-block;
 }
 
 .likes {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
-    gap: 4px;
+    gap: 12px;
     margin-left: 4px;
 }
 
