@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiempo local</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Tiempo local</h1>
+        <nav>
+            <ul>
+                <li>Buenos Aires</li>
+                <li>Ciudad de méxico</li>
+                <li>Santiago</li>
+                <li>Sao Paulo</li>
+                <li>Quito</li>
+            </ul>
+        </nav>
+        <div>
+            <label for="tempUnit">Mostrar temperatura en</label>
+            <select name="tempUnit" id="tempUnit" onchange="celsiusToFarenheit()">
+                <option value="value1">°C</option>
+                <option value="value2">°F</option>
+            </select>
+        </div>
+    </header>
+    <section>
+        <h2>Nombre Capital</h2>
+        <div class="week">
+            <div class="card">
+                <img src="https://placehold.co/80x80" alt="icono clima">
+                <strong>Día</strong>
+                <p>Condición</p>
+                <p>Max°<span id="celsius">C</span> Min°<span id="celsius">C</span></p>
+            </div>
+            <div class="card">
+                <img src="https://placehold.co/80x80" alt="icono clima">
+                <strong>Día</strong>
+                <p>Condición</p>
+                <p>Max°<span id="celsius">C</span> Min°<span id="celsius">C</span></p>
+            </div>
+            <div class="card">
+                <img src="https://placehold.co/80x80" alt="icono clima">
+                <strong>Día</strong>
+                <p>Condición</p>
+                <p>Max°<span id="celsius">C</span> Min°<span id="celsius">C</span></p>
+            </div>
+            <div class="card">
+                <img src="https://placehold.co/80x80" alt="icono clima">
+                <strong>Día</strong>
+                <p>Condición</p>
+                <p>Max°<span id="celsius">C</span> Min° <span id="celsius">C</span></p>
+            </div>
+            <div class="card">
+                <img src="https://placehold.co/80x80" alt="icono clima">
+                <strong>Día</strong>
+                <p>Condición</p>
+                <p>Max°<span id="celsius">C</span> Min°<span id="celsius">C</span></p>
+            </div>
+        </div>
+    </section>
+<div class="banner">
+    <p>Detente! Tiempo de cookies. Usamos cookies (tristemente, no las comestibles) para personalizar contenido y anuncios, proporcionar funciones de redes sociales y analizar nuestro tráfico.</p>
+    <a href="">Lee más...</a>
+    <button onclick="removeBanner()">Acepto</button>
+</div>
+<script>
+    alert("Cargando información");
+
+    function removeBanner() {
+        let bannerEl = document.getElementsByClassName("banner");
+        bannerEl.remove();
+    }
+
+    //Cambiar inner text de p id="Cel" (°C) a °F según el value asociado en el select
+    function celsiusToFarenheit() {
+        let tempEl = document.getElementById("tempUnit");
+        let tempsEl = document.querySelectorAll("celsius");
+        for (var i = 0; i < tempsEl.length; i++){
+            tempsEl[i].innerText = tempEl.value; 
+        }
+    }
+</script>
+<!--<script src="script.js"></script>-->
+</body>
+</html>

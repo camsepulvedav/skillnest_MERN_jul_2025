@@ -1,0 +1,15 @@
+*{
+    font-weight: bold;
+}
+
+p, button, input[type="email"], #title1, .titles {
+    font-size: 20px;
+}
+
+.titles {
+    color: blue;
+}
+
+#title1{
+    font-style: italic;
+}

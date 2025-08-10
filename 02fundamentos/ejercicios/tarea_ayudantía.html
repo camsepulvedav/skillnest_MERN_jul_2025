@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea ayudantía</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            display: flex;
+            background-color: antiquewhite;
+            color: #333;
+        }
+        .inputText {
+            
+            width: 45%;
+            height: auto;
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 16px;
+            font-weight: bold;
+        }
+
+        .woosh {
+        width: 15%;
+        height: auto;
+        }
+        
+        img {
+        width: 180%;
+        position: relative;
+        top: 40%;
+        left: -20%;
+        }
+
+        .paragraph {
+            width: 40%;
+            height: auto;
+            padding: 32px;
+        }
+
+        input {
+            background-color:#f5f5f5;
+            height: 64px;
+            border: 1px #333 solid;
+            font-style: italic;
+            text-align: center;
+        }
+
+        button {
+            border: 1px #666 solid;
+            border-radius: 4px;
+            width: fit-content;
+            margin: 24px;
+            padding: 8px;
+            align-self: center;
+            cursor: pointer;
+        }
+
+        p {
+            min-height: 150px;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="inputText">
+        <label for="text">Ingresa un texto :</label>
+        <input type="text" id="text" placeholder="Escribe algo aquí uwu">
+        <button onclick="handleClick()">✨Quieres ver un truco de magia?✨</button>
+    </div>
+    <div class="woosh">
+        <img src="https://www.wizardcatsol.com/landing-cat.png" alt="michi woosh">
+    </div>
+    <div class="paragraph">
+        <p id="paragraph"></p>
+    </div>
+
+    <script>
+        // Ingresar texto en input, apretar botón y mostrar texto ingresado en un p (tip: ocupar propiedad innertext)
+        function handleClick() {
+            //Quiero capturar lo ingresado en el input
+            //Al hacer click, quiero mover el texto capturado del input al p
+            //y cambiar el color de fondo del p
+            let inputEl = document.getElementById("text");
+            let text = inputEl.value;
+            let paragraphEl = document.getElementById("paragraph");
+            paragraphEl.innerText = text;
+            paragraphEl.style.backgroundColor = "#f5f5f5";
+        }
+    </script>
+</body>
+</html>
