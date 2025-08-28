@@ -2,7 +2,10 @@
 import form from "./components/form"
 import './App.css'
 
-function App() {
+function App =()=> {
+  const estudiantes = [
+    {nombre: ""},
+  ]
 
   const title = "Título del formulario pasado x props"
   return (

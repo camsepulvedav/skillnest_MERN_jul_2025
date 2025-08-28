@@ -1,0 +1,14 @@
+.containerMain {
+    width: 60%;
+    height: 480px;
+    background-color: magenta;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.subContainerMain {
+    display: flex;
+    gap: 12px;
+}

@@ -47,50 +47,46 @@ Considerando lo anterior, encontrar/crear:*/
 
 
 //1) Un conjunto de videojuegos cuyo número de identificación es divisible uniformemente por 3.
-const idDivisible = videojuegos.filter ((game) => {game.id/3 % 0});
+const idDivisible = videojuegos.filter (game => game.id % 3 === 0);
 console.log("1:", idDivisible)
 
 //2) Un conjunto de videojuegos que pertenecen al género “acción-RPG”.
-const AccionAndRPG = videojuegos.filter ((game) => {game.genero === "acción-RPG"});
-console.log("2:", AccionAndRPG)
+const ActionAndRPG = videojuegos.filter (game => game.genero === "acción-RPG");
+console.log("2:", ActionAndRPG)
 
-//3) Un conjunto de videojuegos que tienen más de un género.
-const TwoOrMoreGenres = videojuegos.filter ((game) => {game.genero.length >= 2});
+//3)! Un conjunto de videojuegos que tienen más de un género.
+const TwoOrMoreGenres = videojuegos.filter (game => game.genero.length >= 2);
 console.log("3:", TwoOrMoreGenres)
 
 //4) Una lista con los nombres de los videojuegos.
-videojuegos.forEach((game) => console.log(game.nombre));
+videojuegos.forEach(game => console.log("4:", game.nombre));
 
 //5) Una lista con los nombres de los videojuegos con un número de identificación superior a 19.
-const idMoreThan19 = videojuegos.filter ((game) => {game.id > 19});
+const idMoreThan19 = videojuegos.filter (game => game.id > 19);
 console.log("5:", idMoreThan19)
 
 //6) Una lista con los nombres de los videojuegos cuyo único género es “shooter”.
-const shooters = videojuegos.filter ((game) => {game.genero === "shooter"});
+const shooters = videojuegos.filter (game => game.genero === "shooter");
 console.log("6:", shooters)
 
-//7) Una lista que contenga solo el primer género de todos los videojuegos cuyo segundo género es “aventura”.
-if (game.genero[1] === "aventura") {
-    console.log(game.genero[0])
-}
+//7) !Una lista que contenga solo el primer género de todos los videojuegos cuyo segundo género es “aventura”.
+const firstGenre = videojuegos.map(game => {
+    if (game.genero[1] === "aventura") {
+        console.log(game.genero[0])
+    }
+});
+console.log(firstGenre)
 
 //8) Un conteo del número de videojuegos que son del género “party”.
-if (game.genero === "party") {
-    let counter = 0;
-    counter++;
-    return counter
-}
+const partyGames = videojuegos.filter (game => game.genero === "party");
+console.log ("8:", partyGames.length)
 
 //9) Una lista con todos los videojuegos excepto aquellos cuyo número de identificación sea múltiplo de 5.
-const multipleOf5 = videojuegos.filter ((game) => {!game.id/5 % 0});
+const multipleOf5 = videojuegos.filter (game => (game.id % 5 !== 0));
 console.log(multipleOf5)
 
-//10) Una lista con todos los videojuegos y para el videojuego con el número de identificación 5, se cambia su género por “otro”.
-videojuegos.forEach((game) => console.log(game));
-game.id === 5
-
-
-
-videojuegos.forEach((element) => console.log(element)); //Devuelve cada videojuego del array
-const vjSizes = videojuegos.map((videojuegos) => videojuegos.length); //Devuelve el n° de caracteres de cada elemento del array
-const filteredVJ = videojuegos.filter ((videojuegos) => videojuegos.startsWith ("P")) //Devuelve videojuegos que parten con P
+//10) !Una lista con todos los videojuegos y, para el videojuego con el número de identificación 5, se cambia su género por “otro”.
+/*const modId5 = videojuegos.map(game => 
+    game.id === 5? game.genero = "otro":
+    "lorem";)*/
+console.log(modId5)
