@@ -1,14 +1,14 @@
 import "./Main.css" 
-import Section from "../Section/Section"
-import Banner from "../Banner/Banner"
+import SubContent from "../SubContent/SubContent"
+import Advertisement from "../Advertisement/Advertisement"
 
 const Main = () => {
     return (
     <div className="containerMain">
         <div className="subContainerMain">
-            <Section/><Section/><Section/>
+            <SubContent/><SubContent/><SubContent/>
         </div>
-        <Banner/>
+        <Advertisement/>
     </div>)
 }
 

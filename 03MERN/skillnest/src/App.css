@@ -2,23 +2,26 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /*background-color: #f5f5f5;*/
 }
 
 #root {
-    width: 100vw;
-    margin: 0 auto;
-    padding: 2rem;
+    width: 70vw;
+    margin: auto;
 }
 
 .mainContainer {
     display: flex;
     flex-direction: column;
-    background-color: gray;
-    padding: 12px;
+    background-color: #eaeaea;
+    padding: 24px;
+    height: fit-content;
 }
 
 .subContainer {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
+    margin-top: 12px;
 }

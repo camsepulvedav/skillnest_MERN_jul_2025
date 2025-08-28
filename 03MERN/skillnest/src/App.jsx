@@ -1,20 +1,19 @@
 import './App.css'
-import NavBar from "./components/NavBar/NavBar"
+import TopNav from "./components/TopNav/TopNav"
 import Main from "./components/Main/Main"
-import Side from "./components/Side/Side"
+import SideNav from "./components/SideNav/SideNav"
 
 const App = () =>{
 
-  //Lógica
- 
+  //Acá va la lógica, si es que aplica
 
-  //HTML  
+  //Después del return, se escribe el HTML necesario  
   return (
     <div className ="mainContainer">
-      <NavBar/>
+      <TopNav/>
       <div className="subContainer">
         <Main/>
-        <Side/>
+        <SideNav/>
       </div>
     </div>
   )
