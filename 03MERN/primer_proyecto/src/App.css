@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f0f0f0;
+  color: #050505;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+h1 {
+  color: #2C3E50;
+  text-align: center;
+}
+
+h2 {
+  color: #16A085;
+  margin: 32px 0 24px;
+  font-size: 2.5rem;
+  padding-left: 22.5%;
+}
+
+ul li {
+  list-style: none;
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+  padding-left: 22.5%;
+}
+
