@@ -54,9 +54,11 @@ console.log("1:", idDivisible)
 const ActionAndRPG = videojuegos.filter (game => game.genero === "acción-RPG");
 console.log("2:", ActionAndRPG)
 
-//3)! Un conjunto de videojuegos que tienen más de un género.
-const TwoOrMoreGenres = videojuegos.filter (game => game.genero.length >= 2);
+//3) Un conjunto de videojuegos que tienen más de un género.
+/*const TwoOrMoreGenres = videojuegos.filter (game => game.genero.length >= 2);
 console.log("3:", TwoOrMoreGenres)
+Este código no sirve porque estoy trabajando un string como si fuera array... 
+creo que en estos momentos revisa que el contenido dentro de game.genero tenga 2 o más letras xD*/
 
 //4) Una lista con los nombres de los videojuegos.
 videojuegos.forEach(game => console.log("4:", game.nombre));
@@ -69,13 +71,14 @@ console.log("5:", idMoreThan19)
 const shooters = videojuegos.filter (game => game.genero === "shooter");
 console.log("6:", shooters)
 
-//7) !Una lista que contenga solo el primer género de todos los videojuegos cuyo segundo género es “aventura”.
-const firstGenre = videojuegos.map(game => {
+//7) Una lista que contenga solo el primer género de todos los videojuegos cuyo segundo género es “aventura”.
+/*const firstGenre = videojuegos.map(game => {
     if (game.genero[1] === "aventura") {
         console.log(game.genero[0])
     }
 });
-console.log(firstGenre)
+console.log(firstGenre) 
+Este código no sirve porque estoy trabajando un string como si fuera array*/
 
 //8) Un conteo del número de videojuegos que son del género “party”.
 const partyGames = videojuegos.filter (game => game.genero === "party");
@@ -85,8 +88,9 @@ console.log ("8:", partyGames.length)
 const multipleOf5 = videojuegos.filter (game => (game.id % 5 !== 0));
 console.log(multipleOf5)
 
-//10) !Una lista con todos los videojuegos y, para el videojuego con el número de identificación 5, se cambia su género por “otro”.
+//10) Una lista con todos los videojuegos y, para el videojuego con el número de identificación 5, se cambia su género por “otro”.
 /*const modId5 = videojuegos.map(game => 
     game.id === 5? game.genero = "otro":
-    "lorem";)*/
+    "lorem";)
 console.log(modId5)
+Estoy colgada acá, pero seguiré intentando resolver los tres puntos que tengo pendientes*/
