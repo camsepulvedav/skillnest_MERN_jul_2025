@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+/*.TarjetaPerfil {
+    border: 1px #050505 solid;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+    padding: 16px;
+}*/
+
+.bordeContendorActivo {
+    border: 1px green solid;
+}
+
+.bordeContendorInactivo {
+    border: 1px red solid;
+}

@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#root {
+    width: 100vw;
+    height: auto;
+    padding: 32px 0; 
+}
+
+.mainContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    height: auto;
+    padding: 0 15%;
+    gap: 24px;
+}
+
+h1 {
+    text-align: center;
+    color: #000080;
+    margin-top: 1%;
+    margin-bottom: 3%;
+}
