@@ -4,6 +4,11 @@
     gap: 8px;
     align-items: center;
     margin-top: 24px;
+    width: 85%;
+}
+
+.NoNotes {
+    margin: 36px 0;
 }
 
 .note {
@@ -11,8 +16,10 @@
     background-color: #F5EBE0;
     border-radius: 4px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    width: 85%;
+    width: 100%;
+    height: auto;
     padding: 8px 16px;
 
 }

@@ -10,7 +10,7 @@ function App() {
 
   const addNote = (noteText, priority) => {
     const newNote = {
-      // id: ,
+      id: Date.now(),
       text: noteText,
       priority: priority,
     }
@@ -22,6 +22,10 @@ function App() {
     return note.priority === filter
   })
   
+  const deleteNote = (idToDelete) => { 
+       setNotes(notes.filter(note => note.id !==idToDelete))
+    }
+
 
   return (
       <div className='mainContainer'>
@@ -32,7 +36,7 @@ function App() {
         {/*Componente para filtrar */}
         <Filter currentFilter={filter} onFilterChange={setFilter}/>
         {/*Componente para mostrar lista*/}
-        <List notes={filteredNotes}/>
+        <List notes={filteredNotes} onDeleteNote={deleteNote}/>
       </div>
   )
 }

@@ -7,6 +7,8 @@ const Form = ({onAddNote}) => {
 
     const handleSubmit =()=> {
         onAddNote(noteText,priority)
+        setNoteText ("")
+        setPriority ("Baja")
     }
 
     
