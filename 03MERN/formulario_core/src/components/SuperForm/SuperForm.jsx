@@ -16,9 +16,9 @@ const SuperForm = () => {
   }
 
   const handleSubmit = () => {
-    // Acá debería ir el traspaso de datos a la lista?
-    //Tendría que validar antes de enviar, al menos en principio...
-    alert("🦸‍♂️¡Felicidades! Tu membresía ha sido aprobada por el Consejo de la Liga.🦸‍♀️");
+    //Quisiera mostrar un mensaje, en un alert o un toast, pero tendría que validar el formulario antes de enviar...
+      //¡Felicidades! Tu membresía ha sido aprobada por el Consejo de la Liga 🎉🎉
+    // En esta sección debería ir el traspaso de datos a la lista?
     setData ({
       firstName: "",
       lastName: "",
