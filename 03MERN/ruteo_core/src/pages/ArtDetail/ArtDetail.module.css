@@ -1,0 +1,30 @@
+.frame {
+    position: relative;
+    width: ;
+    height: ;
+    margin: ;
+    padding: ;
+    background-image: url("/assets/vectors/marco_art-noveau_clean.svg") ;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: ;
+    height: ;
+    margin: ;
+}
+
+.btnArrow {
+    background-color: #aca67f;
+    color:#f5f5f5;
+}
+
+.btnHome {
+    background-color: #e6b9ae;
+    color:#f5f5f5;
+}
