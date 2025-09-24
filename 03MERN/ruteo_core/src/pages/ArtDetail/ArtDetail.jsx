@@ -45,10 +45,12 @@ const ArtDetail = () => {
                 <img src={currentArtwork.img} alt={currentArtwork.name} />
             </div>
         </div>
-        <p>"{currentArtwork.name}" - {currentArtwork.author} ({currentArtwork.year})</p>
-        <button className={styles.btnArrow} onClick={goToPrevious}>← Anterior</button>
-        <button className={styles.btnHome} onClick={() => navigate("/")}>Inicio</button>
-        <button className={styles.btnArrow} onClick={goToNext}>Siguiente →</button>
+        <div id="navMenu">
+            <p>"{currentArtwork.name}" - {currentArtwork.author} ({currentArtwork.year})</p>
+            <button className={styles.btnArrow} onClick={goToPrevious}>← Anterior</button>
+            <button className={styles.btnHome} onClick={() => navigate("/")}>Inicio</button>
+            <button className={styles.btnArrow} onClick={goToNext}>Siguiente →</button>
+        </div>    
         </>
     )
 }
