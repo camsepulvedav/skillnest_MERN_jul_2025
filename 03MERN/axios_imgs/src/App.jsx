@@ -1,34 +1,56 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import axios from "axios"
+import {useEffect, useState} from "react"
 import './App.css'
+import ImageDisplay from "./components/ImageDisplay"
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [currentImg, setCurrentImg] = useState(null);
+  const [loading, setLoading] = useState (false);
+
+  const Pexels_Api_Key = "Bqj8Miy1KqcQvhEqExPaJI2nobO9dm0sC14dq9Q6ziUEIoNKa2odkKEi";
+
+  useEffect (() => {
+    getRandomImg();
+  }, [])
+
+  const getRandomImg = async () => {
+    setLoading(true);
+    try {
+      const randomPage = Math.floor(Math.random() *100) +1;
+
+      const result = await axios.get(
+         `https://api.pexels.com/v1/curated?per_page=1&page=${randomPage}`,
+        {
+          headers: {
+            Authorization: Pexels_Api_Key
+          }
+        }
+      );
+
+      if (result.data.photos && result.data.photos.length > 0) {
+        setCurrentImg(result.data.photos[0]);
+      }
+    } catch(error) {
+      console.error("Error al obtener imagen", error);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
+    <div id="mainContainer"> 
+      <h1>Una 📸 al azar</h1>
+      <ImageDisplay image={currentImg} loading={loading}/>
+      <button onClick={getRandomImg} disabled={loading}>
+        {loading? "Cargando...": "¡Quiero una imagen nueva!"}
+      </button>
+      <div id="credits">
+        <p>Fotos obtenidas desde</p>
+        <a href="https://www.pexels.com">
+        <img src="https://images.pexels.com/lib/api/pexels.png" alt="Pexels logo in black"/>
         </a>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
   )
 }
 
