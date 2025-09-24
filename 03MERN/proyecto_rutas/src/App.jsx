@@ -1,12 +1,14 @@
-import { BrowserRouter, Route, Routes, useLocation, useParams } from "react-router"
+// import { BrowserRouter, Route, Routes, useLocation, useParams } from "react-router"
+// import axios from "axios"
 import './App.css'
+import MyEndpoint from "./components/MyEndpoint/MyEndpoint"
 
 function App() {
-  const {name} = useParams ();
+
 
   return (
     <>
-      <header>
+      {/* <header>
         <p>Hola {name}!</p>
         <button>Cerrar sesión</button>
       </header>
@@ -24,7 +26,8 @@ function App() {
           <Route path="*" element={<p>Página no encontrada 💔</p>}></Route>
 
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
+      <MyEndpoint/>
     </>
   )
 }
