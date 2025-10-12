@@ -1,0 +1,42 @@
+.mainContainer {
+    display: grid;
+    grid-template-columns: repeat (5, 1fr);
+    grid-template-rows: repeat (4, 1fr);
+    gap: 0;
+}
+
+.header {
+    grid-area: 1/1/2/6;
+}
+
+.searchInput {
+    width: 60%;
+    margin-left: 20%;
+    padding: 12px;
+}
+
+.songsList {
+    grid-area: 2/1/5/6;
+    width: 60%;
+    margin-top: 4%;
+    margin-left: 20%;
+}
+
+.songsList table {
+    border: 2px solid #4D3465;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+}
+
+.songsList thead {
+    background-color: #261A32;
+}
+
+.songsList th, td {
+    padding: 16px;
+}
+
+.songsList td {
+    color: #AA90C4;
+}
