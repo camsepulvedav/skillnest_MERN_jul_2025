@@ -37,6 +37,16 @@
     padding: 16px;
 }
 
+.link {
+    color:#f5f5f5; 
+    font-style: italic;
+}
+
+.link:hover {
+    transition: 0.3 ease;
+    text-decoration: underline;
+}
+
 .songsList td {
     color: #AA90C4;
 }

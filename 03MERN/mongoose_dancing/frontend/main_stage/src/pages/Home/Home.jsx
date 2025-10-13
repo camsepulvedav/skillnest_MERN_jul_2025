@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import {getAllSongs} from "../../api/songsApi"
+import {Link} from "react-router"
 import styles from "./Home.module.css"
 
 const Home = () => {
@@ -89,7 +90,11 @@ const Home = () => {
                         ) : (
                             filteredSongs.map(song => (
                             <tr key={song._id}>
-                                <td style={{color:"#f5f5f5", fontStyle: "italic"}}>{song.title}</td>
+                                <td>
+                                    <Link to={`/canciones/${song._id}`} className={styles.link}>
+                                        {song.title}
+                                    </Link>
+                                </td>
                                 <td>{song.artist}</td>
                                 <td>{song.genre}</td>
                             </tr>

@@ -7,7 +7,7 @@ export const getAllSongs = () => {
 }
 
 export const getOneSong = (id) => {
-    return axios.get(`${API_URL}}/${id}`);
+    return axios.get(`${API_URL}/${id}`);
 }
 
 export const createSong = (songData) => {
