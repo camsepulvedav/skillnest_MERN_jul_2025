@@ -9,9 +9,11 @@ const Home = () => {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        getAllSongs()
-            .then(response => {
+        const fetchSongs = async () => {
+            try {
+                const response = await getAllSongs();
                 console.log("Canciones recibidas:", response.data);
+
                 if (Array.isArray(response.data)){
                     setSongs(response.data);
                 } else {
@@ -19,12 +21,13 @@ const Home = () => {
                     setSongs([]);
                 }
                 setLoading(false);
-            })
-            .catch(error => {
+            } catch (error) {
                 console.error("Hubo un problema al tratar de obtener las canciones", error);
                 setError(error.message);
                 setLoading(false);
-            });
+            }
+        };
+        fetchSongs();
     }, []);
 
     const filteredSongs = Array.isArray(songs)? songs.filter(song => {

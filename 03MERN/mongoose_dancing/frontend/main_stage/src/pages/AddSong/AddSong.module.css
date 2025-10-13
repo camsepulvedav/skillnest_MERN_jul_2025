@@ -4,12 +4,19 @@
     gap: 36px;
     width: 60%;
     margin-left: 20%;
+    padding: 40px 0;
+}
+
+.form form {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
 }
 
 .field {
     display: flex;
     flex-direction: column;
-    /* gap: px; */
+    gap: 2px;
 }
 
 .field input {
@@ -18,7 +25,14 @@
     padding: 12px;
 }
 
-button {
+.error {
+    color: #b87ef1;
+    font-size: medium;
+    margin-top: 4px;
+}
+
+.form button {
     align-self: center;
     padding: 12px 24px;
+    margin-top: 24px;
 }
