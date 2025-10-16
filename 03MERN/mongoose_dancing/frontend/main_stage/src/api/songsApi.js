@@ -13,12 +13,3 @@ export const getOneSong = (id) => {
 export const createSong = (songData) => {
     return axios.post(API_URL, songData);
 }
-
-export const updateSong = (id, songData) => {
-    return axios.put(`${API_URL}/${id}`, songData);
-}
-
-export const deleteSong = (id) => {
-    return axios.delete(`${API_URL}/${id}`);
-}
-

@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose from "mongoose"
 
 const songSchema = new mongoose.Schema({
     title: {
@@ -15,7 +15,6 @@ const songSchema = new mongoose.Schema({
     },
     yearOfRelease: {
         type: Number, 
-        required: [true, "DEBE ingresar un año de lanzamiento"], 
         validate: {
             validator: function(value) {
                 return value >=1920 && value <=2025;

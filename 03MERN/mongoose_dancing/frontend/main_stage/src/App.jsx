@@ -2,9 +2,10 @@ import {BrowserRouter, Routes, Route} from "react-router"
 import Navbar from "./components/Navbar/Navbar"
 import Home from "./pages/Home/Home"
 import AddSong from "./pages/AddSong/AddSong"
+import SongDetails from "./pages/SongDetails/SongDetails"
 import Playlists from "./pages/Playlists/Playlists"
 import CreatePlaylist from "./pages/CreatePlaylist/CreatePlaylist"
-import SongDetails from "./pages/SongDetails/SongDetails"
+import PlaylistDetails from "./pages/PlaylistDetails/PlaylistDetails"
 
 function App() {
   return (
@@ -13,9 +14,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/add" element={<AddSong/>}/>
+          <Route path="/canciones/:id" element={<SongDetails/>}/>
           <Route path="/playlists" element={<Playlists/>}/>
           <Route path="/create" element={<CreatePlaylist/>}/>
-          <Route path="/canciones/:id" element={<SongDetails/>}/>
+          <Route path="/playlists/:id" element={<PlaylistDetails/>}/>
           <Route path="*" element={<p>Página no encontrada 😢💔</p>}/>
         </Routes>
       </BrowserRouter>

@@ -23,16 +23,13 @@ const AddSong = () => {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-
         try {
             const response = await createSong(formData);
             console.log("Canción creada:" ,response.data);
             navigate("/");
         }catch (error) {
             console.error("No se pudo crear la canción", error);
-            if (error.response?.data?.errors) {
                 setErrors(error.response.data.errors);
-            }
         }
     };
 
@@ -49,7 +46,6 @@ const AddSong = () => {
                         value={formData.title}
                         onChange={handleChange} 
                         placeholder="Ingresar el título de la canción"/>
-                    {errors.title && <span className={styles.error}>{errors.title.message}</span>}
                 </div>
                 <div className={styles.field}>
                     <label htmlFor="artist">Artista:</label>
@@ -60,7 +56,6 @@ const AddSong = () => {
                         value={formData.artist}
                         onChange={handleChange}
                         placeholder="Ingresar el nombre del artista"/>
-                    {errors.artist && <span className={styles.error}>{errors.artist.message}</span>}
                 </div>
                 <div className={styles.field}>
                     <label htmlFor="genre">Género:</label>
@@ -71,7 +66,6 @@ const AddSong = () => {
                         value={formData.genre}
                         onChange={handleChange}
                         placeholder="Ingresar el género"/>
-                    {errors.genre && <span className={styles.error}>{errors.genre.message}</span>}
                 </div>
                 <div className={styles.field}>
                     <label htmlFor="album">Álbum:</label>
@@ -82,7 +76,6 @@ const AddSong = () => {
                         value={formData.album}
                         onChange={handleChange}
                         placeholder="Ingresar el nombre del álbum"/>
-                    {errors.album && <span className={styles.error}>{errors.album.message}</span>}
                 </div>
                 <button type="submit">Agregar canción</button>
             </form>

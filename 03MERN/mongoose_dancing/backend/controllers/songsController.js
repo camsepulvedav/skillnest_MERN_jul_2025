@@ -21,25 +21,3 @@ export const getOneSong = async (req, res) => {
     let songFound = await Song.findById(req.params.id);
     return res.status(200).json(songFound);
     }
-
-export const updateSong = async (req, res) => {
-    try {
-        let songUpdated = await Song.findByIdAndUpdate(
-            req.params.id,
-            req.body, 
-            {
-                new: true,
-                runValidators: true
-            })
-        return res.json(songUpdated);
-    } catch (error) {
-        return res.status(400).json({
-            message: error.message
-        });
-    }
-};
-
-export const deleteSong = async (req, res) => {
-    await Song.findByIdAndDelete(req.params.id);
-    return res.status(200).json({});
-    }

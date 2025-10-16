@@ -8,30 +8,24 @@ const Home = () => {
     const [searchTerm, setSearchTerm] = useState("");
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const fetchSongs = async () => {
+        try {
+            const response = await getAllSongs();
+            console.log("Canciones recibidas:", response.data);
+            setSongs(response.data);
+            setLoading(false);
+        } catch (error) {
+            console.error("Hubo un problema al tratar de obtener las canciones", error);
+            setError(error.message);
+            setLoading(false);
+        }
+    }; 
 
     useEffect(() => {
-        const fetchSongs = async () => {
-            try {
-                const response = await getAllSongs();
-                console.log("Canciones recibidas:", response.data);
-
-                if (Array.isArray(response.data)){
-                    setSongs(response.data);
-                } else {
-                    console.error("response.data no es un array:", response.data);
-                    setSongs([]);
-                }
-                setLoading(false);
-            } catch (error) {
-                console.error("Hubo un problema al tratar de obtener las canciones", error);
-                setError(error.message);
-                setLoading(false);
-            }
-        };
         fetchSongs();
     }, []);
 
-    const filteredSongs = Array.isArray(songs)? songs.filter(song => {
+    const filteredSongs = songs.filter(song => {
         if (!song) return false;
         const title = String(song.title || "");
         const artist = String(song.artist || "");
@@ -41,8 +35,7 @@ const Home = () => {
         return title.toLowerCase().includes(search) ||
                 artist.toLowerCase().includes(search) ||
                 genre.toLowerCase().includes(search);
-    })
-    :[];
+    });
 
     if (loading){
         return (
@@ -69,7 +62,7 @@ const Home = () => {
                 placeholder="Buscar canción por nombre, artista o género" 
                 className={styles.searchInput}
                 value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}/>
+                onChange={(event) => setSearchTerm(event.target.value)}/>
             </div>
             <div className={styles.songsList}>
                 <table>
@@ -88,7 +81,7 @@ const Home = () => {
                                 </td>
                             </tr>
                         ) : (
-                            filteredSongs.map(song => (
+                            filteredSongs?.map(song => (
                             <tr key={song._id}>
                                 <td>
                                     <Link to={`/canciones/${song._id}`} className={styles.link}>
