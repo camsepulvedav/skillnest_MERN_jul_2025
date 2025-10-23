@@ -1,48 +1,83 @@
-import {NavLink} from "react-router"
-import styles from "./Navbar.module.css"
+import { NavLink } from "react-router"
+import { AppBar, Toolbar, Box, Button } from "@mui/material"
+import { MusicNote, LibraryMusic, QueueMusic, PlaylistAdd } from "@mui/icons-material"
+
 
 const Navbar = () => {
+    const navItems = [
+        {
+            to: "/",
+            label: "Canciones",
+            icon: <MusicNote sx={{fontSize: 28}}/>
+        },
+        {
+            to: "/agregar",
+            label: "Añadir Canción",
+            icon: <PlaylistAdd sx={{fontSize: 28}}/>
+        },
+        {
+            to: "/playlists",
+            label: "Playlists",
+            icon: <PlaylistAdd sx={{fontSize: 28}}/>
+        },
+        {
+            to: "/playlists/crear",
+            label: "Crear Playlist",
+            icon: <QueueMusic sx={{fontSize: 28}}/>
+        }
+    ];
+
     return(
-        <nav className= {styles.nav}>
-            <NavLink to= "/" className= {({isActive}) => isActive? `${styles.menuOption} ${styles.isActive}` :styles.menuOption}>
-                <svg  xmlns="http://www.w3.org/2000/svg"  width="42"  height="42"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round">
-                    <path d="M3 17a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
-                    <path d="M13 17a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
-                    <path d="M9 17v-13h10v13" />
-                    <path d="M9 8h10" />
-                </svg>
-                <p>Canciones</p>
-            </NavLink>
-            <NavLink to= "/add" className= {({isActive}) => isActive? `${styles.menuOption} ${styles.active}` :styles.menuOption}>
-                <svg  xmlns="http://www.w3.org/2000/svg"  width="42"  height="42"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round">
-                    <path d="M3 17a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
-                    <path d="M9 17v-13h10v8" />
-                    <path d="M9 8h10" /><path d="M16 19h6" />
-                    <path d="M19 16v6" />
-                </svg>
-                <p>Añadir Canción</p>
-            </NavLink>
-            <NavLink to= "/playlists" className= {({isActive}) => isActive? `${styles.menuOption} ${styles.active}` :styles.menuOption}>
-                <svg  xmlns="http://www.w3.org/2000/svg"  width="42"  height="42"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round">
-                    <path d="M14 17m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
-                    <path d="M17 17v-13h4" />
-                    <path d="M13 5h-10" />
-                    <path d="M3 9l10 0" />
-                    <path d="M9 13h-6" />
-                </svg>
-                <p>Playlists</p>
-            </NavLink>
-            <NavLink to= "/create" className= {({isActive}) => isActive? `${styles.menuOption} ${styles.active}` :styles.menuOption}>
-                <svg  xmlns="http://www.w3.org/2000/svg"  width="42"  height="42"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round">
-                    <path d="M19 8h-14" />
-                    <path d="M5 12h9" />
-                    <path d="M11 16h-6" />
-                    <path d="M15 16h6" />
-                    <path d="M18 13v6" />
-                </svg>
-                <p>Crear Playlist</p>
-            </NavLink>
-        </nav>
+        <AppBar
+            position="sticky"
+            sx={{
+                backgroundColor: "secondary.main",
+                boxShadow: "none",
+                borderBottom: "2px solid",
+                borderColor: "divider"
+            }}>
+            <Toolbar sx={{justifyContent: "center", gap: 2, py: 1}}>
+                {navItems.map((item) => (
+                    <Button
+                        key={item.to}
+                        component={NavLink}
+                        to={item.to}
+                        sx={{
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "center",
+                            gap: 0.5,
+                            color: "text.primary",
+                            textTransform: "none",
+                            minWidth: "120px",
+                            py: 1.5,
+                            px: 2,
+                            borderRadius: 2,
+                            transition: "all 0.3s",
+                            "&:hover": {
+                                backgroundColor: "rgba(147, 51, 234, 0.1)",
+                                color: "primary.light",
+                            },
+                        "&.active": {
+                            backgroundColor: "primary.main",
+                            color: "primary.contrastText",
+                            borderBottom: "3px solid",
+                            borderColor: "primary.light",
+                            "&:hover": {
+                                backgroundColor: "primary.dark",
+                            }
+                        }
+                    }}>
+                    <Box component="span">{item.icon}</Box>
+                    <Box component="span" 
+                        sx={{
+                            fontSize: "0.875rem",
+                            fontWeight: 500
+                        }}>{item.label}</Box>
+                    </Button>
+                ))}
+            </Toolbar>
+        </AppBar>
     )
 };
 
